@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2f2f2f;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #2f2f2f;
+}
+#header .tagline .tagline-text {
+  color: #f0f0f0;
+  font-weight: 800;
+  font-size: 4rem;
+  filter: drop-shadow(0 0 5px #00B0FF);
+}
+#header .links-link {
+  margin: 0 1rem;
+  font-size: 3rem;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 200;
+  position: relative;
+}
+#header .links-link:hover {
+  color: #f0f0f0;
+}
+#header .links-link:hover::before {
+  transform: scaleX(1);
+}
+#header .links-link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #f0f0f0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.intro-block {
+  min-height: 20vh;
+  background-color: #434343;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.intro-block .intro-svg {
+  width: 300px;
+}
+.intro-block .intro-tagline {
+  color: #00B0FF;
+}
+.intro-block .intro-bio {
+  margin-top: 2rem;
+  color: #f0f0f0;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 3rem;
+}
+.intro-block .intro-learnmore {
+  background-color: #00B0FF;
+  box-shadow: 0 5px 0 #0487c4;
+  color: white;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+.intro-block .intro-learnmore:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+#about-blocks #location-block {
+  padding: 4rem 0;
+  background-color: #f0f0f0;
+}
+
+.block-content-wrapper {
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+}
+.block-content-wrapper .block-left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.block-content-wrapper .block-right {
+  width: 55%;
+}
+
+.basic-title {
+  color: #00B0FF;
+  font-size: 3rem;
+}
+
+.basic-text {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.blue-bold {
+  color: #00B0FF;
+  font-weight: 500;
+}
+
+.fullw {
+  width: 100%;
+  color: #00B0FF;
+  height: 2px;
+  background-color: #00B0FF;
+  border: none;
+}
+
+.basic-image-wrapper {
+  display: flex;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 1rem;
+}
+.basic-image-wrapper .basic-image {
+  height: 400px;
+  border-radius: 25px;
+  border: #00B0FF solid 8px;
+}
+.basic-image-wrapper .basic-svg {
+  height: 200px;
+}
+
+.image-block {
+  height: 50vh;
+}
+.image-block .image-background {
+  padding: 4rem 0;
+  height: 50vh;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  filter: brightness(40%);
+}
+.image-block .image-block-content-wrapper {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.image-block .image-block-content-wrapper .image-title {
+  color: #00B0FF;
+  font-size: 3rem;
+  margin: 1rem 0;
+  border: #00B0FF solid 4px;
+  padding: 1rem;
+  border-radius: 25px;
+}
+.image-block .image-block-content-wrapper .image-text {
+  color: #f0f0f0;
+  font-size: 2rem;
+  max-width: 77%;
+  background-color: rgba(0, 0, 0, 0.2039215686);
+  padding: 1rem;
+  border-radius: 25px;
+}
+
+.costs-block {
+  padding: 4rem 0;
+  background-color: #f0f0f0;
+}
+
+.footer {
+  background-color: #2f2f2f;
+  padding-top: 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  width: 6vmin;
+  height: 6vmin;
+  box-sizing: border-box;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.arrow::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-width: 0.8vmin 0.8vmin 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  transition: 0.2s ease;
+  display: block;
+  transform-origin: 100% 0;
+}
+.arrow:after {
+  content: "";
+  float: left;
+  position: relative;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  border-width: 0 0.8vmin 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  transform-origin: 100% 0;
+  transition: 0.2s ease;
+}
+.arrow:hover::after {
+  transform: rotate(45deg);
+  border-color: orange;
+  height: 120%;
+}
+.arrow:hover::before {
+  border-color: orange;
+  transform: scale(0.8);
+}/*# sourceMappingURL=style.css.map */
